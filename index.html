@@ -235,28 +235,155 @@
     <img src="skills_grid.png" alt="Skills" style="width:100%; border-radius:12px;">
   </section>
 
+ section {
+      padding: 7rem 2rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .contact-section {
+      background-color: #f0f4f9;
+      border-radius: 12px;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .contact-details, .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-details p {
+      margin-bottom: 1.5rem;
+      color: #6b7280;
+    }
+    .contact-info {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.25rem;
+    }
+    .contact-info i {
+      font-size: 1.25rem;
+      margin-right: 0.75rem;
+      color: #2563eb;
+      margin-top: 0.65rem;
+    }
+    .contact-info a, .contact-info span {
+      font-weight: 500;
+      color: #1c1e21;
+      text-decoration: none;
+    }
+    .contact-info b {
+      font-weight: 700;
+      color: #1c1e21;
+      display: inline-block;
+      margin-bottom: 0.25rem;
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 10px;
+      text-align: center;
+      border-radius: 50%;
+      background: #f3f4f6;
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+    .contact-form {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+    .contact-form h3 {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      background-color: #f9fafb;
+      color: #111827;
+      margin-bottom: 1rem;
+    }
+    .contact-form textarea {
+      height: 140px;
+    }
+    .contact-form button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      align-self: flex-start;
+      display: flex;
+      align-items: center;
+    }
+    .contact-form button i {
+      margin-right: 0.5rem;
+    }
+  </style>
+</head>
+<body>
   <section id="contact">
-    <h2>Let's Work Together</h2>
-    <p>Ready to tackle your next engineering challenge? Let’s connect.</p>
-    <div class="contact-container">
+    <h2 style="text-align:center; font-size: 2.2rem; font-weight: 700;">Let's Work Together</h2>
+    <p style="text-align:center; max-width: 750px; margin: auto; margin-bottom: 2rem; color:#6b7280;">Ready to tackle your next engineering challenge? Let's discuss how we can bring innovative solutions to your project.</p>
+    <div class="contact-section">
       <div class="contact-details">
-        <div class="contact-info"><i class="fas fa-envelope"></i><span>contact@engineer.com</span></div>
-        <div class="contact-info"><i class="fas fa-phone"></i><span>+1 (555) 123-4567</span></div>
-        <div class="contact-info"><i class="fas fa-map-marker-alt"></i><span>San Francisco, CA</span></div>
-        <div class="contact-info"><i class="fab fa-linkedin"></i><span>linkedin.com/in/engineer</span></div>
-        <p>Follow Me:</p>
+        <h3 style="font-weight: 700; margin-bottom: 1rem;">Get In Touch</h3>
+        <p>I'm always interested in new opportunities and challenging projects. Whether you need engineering consultation, design services, or technical expertise, I'd love to hear from you.</p>
+        <div class="contact-info"><i class="fas fa-envelope"></i><div><b>Email</b><br/><a href="mailto:kadya001@umn.edu">kadya001@umn.edu</a></div></div>
+        <div class="contact-info"><i class="fas fa-phone"></i><div><b>Phone</b><br/><span>+1 (555) 123-4567</span></div></div>
+        <div class="contact-info"><i class="fas fa-map-marker-alt"></i><div><b>Location</b><br/><span>San Francisco, CA</span></div></div>
+        <div class="contact-info"><i class="fab fa-linkedin"></i><div><b>LinkedIn</b><br/><a href="https://www.linkedin.com/in/engineer" target="_blank">linkedin.com/in/engineer</a></div></div>
+        <p style="margin-top: 2rem; font-weight: 700;">Follow Me</p>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/in/engineer" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fas fa-envelope"></i></a>
+          <a href="mailto:kadya001@umn.edu"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-      <div class="contact-form">
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Email Address">
-        <input type="text" placeholder="Subject">
-        <textarea rows="5" placeholder="Tell me about your project and how I can help..."></textarea>
-        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      <div class="contact-form" style="margin-top: -20px; padding-bottom: 3rem; padding-left: 1.5rem; padding-right: 1.5rem;">
+        <h3>Send a Message</h3>
+        <form action="mailto:kadya001@umn.edu" method="POST" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Tell me about your project and how I can help..." required></textarea>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </form>
       </div>
     </div>
   </section>
