@@ -1,60 +1,268 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Divya Kadyan Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>ME Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fc;
+      color: #1c1e21;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .nav-right a {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    section {
+      padding: 7rem 2rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-top: 2rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .contact-details, .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact-form button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .contact-info {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .contact-info i {
+      font-size: 1.25rem;
+      margin-right: 0.75rem;
+      color: #2563eb;
+    }
+    .social-icons a {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      margin-right: 10px;
+      text-align: center;
+      border-radius: 50%;
+      background: #e5e7eb;
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .timeline {
+      position: relative;
+      margin-top: 3rem;
+      padding-left: 30px;
+      border-left: 3px solid #2563eb;
+    }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 3rem;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 1.5rem;
+      width: 20px;
+      height: 20px;
+      background: #2563eb;
+      border: 3px solid white;
+      border-radius: 50%;
+      z-index: 10;
+    }
+  </style>
 </head>
-<body class="font-inter bg-gray-50 text-gray-800">
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold"><span class="text-blue-600">Divya</span> Kadyan</h1>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#about" class="text-gray-700 hover:text-blue-600">About</a>
-        <a href="#articles" class="text-gray-700 hover:text-blue-600">Articles</a>
-        <a href="#projects" class="text-gray-700 hover:text-blue-600">Projects</a>
-        <a href="#experience" class="text-gray-700 hover:text-blue-600">Experience</a>
-        <a href="#skills" class="text-gray-700 hover:text-blue-600">Skills</a>
-        <a href="#contact" class="bg-blue-600 text-white px-4 py-1.5 rounded hover:bg-blue-700">Contact</a>
-      </nav>
+<body>
+  <header>
+    <div><strong style="color:#2563eb">ME</strong> Portfolio</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#articles">Articles</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
+    <div class="nav-right">
+      <a href="#contact">Contact</a>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-4">
-    <section id="about" class="py-16 flex flex-col md:flex-row gap-8 items-center">
-      <div class="flex-1">
-        <div class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold mb-4">Mechanical Engineer</div>
-        <h2 class="text-4xl font-bold mb-4">Designing the <span class="text-blue-600">Future</span></h2>
-        <p class="text-lg text-gray-600 mb-6">I specialize in innovative design solutions, thermal analysis, and advanced manufacturing processes. I convert complex problems into elegant, manufacturable solutions.</p>
-        <div class="space-x-4">
-          <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded font-semibold">Download Resume</a>
-          <a href="#contact" class="border border-gray-300 px-4 py-2 rounded font-semibold text-gray-700 hover:border-gray-500">Get in Touch</a>
+  <section id="about">
+    <h2>Designing the Future</h2>
+    <p>Mechanical engineer specializing in thermal analysis, design, and manufacturing processes. Experienced in transforming complex engineering challenges into elegant, efficient systems.</p>
+  </section>
+
+  <section id="articles">
+    <h2>Publications & Articles</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="article1.png" alt="Article 1" style="width:100%; border-radius:8px;">
+        <h3>The Future of Thermal Management in Electronics</h3>
+        <p>An in-depth look at emerging technologies like vapor chambers and thermal interface materials.</p>
+      </div>
+      <div class="card">
+        <img src="article2.png" alt="Article 2" style="width:100%; border-radius:8px;">
+        <h3>Bridging the Gap: Integrating Simulation and Physical Testing</h3>
+        <p>Best practices for creating a feedback loop between CFD/FEA and real-world testing.</p>
+      </div>
+      <div class="card">
+        <img src="article3.png" alt="Article 3" style="width:100%; border-radius:8px;">
+        <h3>Lean Principles for the Modern Engineering Team</h3>
+        <p>Applying lean manufacturing to reduce waste and optimize design workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Heat Exchanger Design</h3>
+        <img src="heat_exchanger.png" alt="Heat Exchanger Design" width="100%">
+        <p>Shell-and-tube exchanger design with 25% efficiency improvement. Tools: SolidWorks, Fluent, MATLAB.</p>
+      </div>
+      <div class="card">
+        <h3>Automated Manufacturing Line</h3>
+        <img src="automation.png" alt="Automated Manufacturing Line" width="100%">
+        <p>Reduced production time by 40% with full robotic integration.</p>
+      </div>
+      <div class="card">
+        <h3>Wind Turbine Blade Optimization</h3>
+        <img src="wind_turbine.png" alt="Wind Turbine Blade" width="100%">
+        <p>12% power output gain through aerodynamic refinement.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="timeline">
+      <div class="timeline-entry">
+        <h3>Senior Mechanical Engineer – TechFlow Dynamics</h3>
+        <p><em>Feb 2021 – Present</em></p>
+        <ul>
+          <li>Led next-gen heat exchanger development (25% efficiency gain).</li>
+          <li>Managed $2M R&D budget, 15% under budget.</li>
+          <li>Mentored 6 engineers in thermal analysis standards.</li>
+        </ul>
+      </div>
+      <div class="timeline-entry">
+        <h3>Mechanical Engineer – Precision Automation Corp</h3>
+        <p><em>May 2018 – Feb 2021</em></p>
+        <ul>
+          <li>Designed automation systems (40% efficiency boost).</li>
+          <li>Lean manufacturing reduced waste by 25%.</li>
+          <li>Achieved 99.5% uptime on key equipment.</li>
+        </ul>
+      </div>
+      <div class="timeline-entry">
+        <h3>Junior Mechanical Engineer – GreenTech Solutions</h3>
+        <p><em>Jan 2017 – May 2018</em></p>
+        <ul>
+          <li>Contributed to aerodynamic optimization of turbines.</li>
+          <li>Performed CFD and structural simulations.</li>
+          <li>Saved $100K in material costs via design optimization.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Expertise</h2>
+    <img src="skills_grid.png" alt="Skills" style="width:100%; border-radius:12px;">
+  </section>
+
+  <section id="contact">
+    <h2>Let's Work Together</h2>
+    <p>Ready to tackle your next engineering challenge? Let’s connect.</p>
+    <div class="contact-container">
+      <div class="contact-details">
+        <div class="contact-info"><i class="fas fa-envelope"></i><span>contact@engineer.com</span></div>
+        <div class="contact-info"><i class="fas fa-phone"></i><span>+1 (555) 123-4567</span></div>
+        <div class="contact-info"><i class="fas fa-map-marker-alt"></i><span>San Francisco, CA</span></div>
+        <div class="contact-info"><i class="fab fa-linkedin"></i><span>linkedin.com/in/engineer</span></div>
+        <p>Follow Me:</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-      <div class="flex-1">
-        <img src="https://images.unsplash.com/photo-1614064641938-d9d2206d5800?auto=format&fit=crop&w=800&q=80" class="rounded-xl w-full max-w-md mx-auto" alt="Engineer at work">
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Subject">
+        <textarea rows="5" placeholder="Tell me about your project and how I can help..."></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="contact" class="py-16">
-      <h2 class="text-3xl font-bold text-center mb-6">Let's Connect</h2>
-      <div class="max-w-2xl mx-auto text-center">
-        <p class="mb-4">Have a project in mind or just want to say hello? Drop me a message below!</p>
-        <form class="space-y-4">
-          <input type="text" placeholder="Your Name" class="w-full border border-gray-300 rounded px-4 py-2" required>
-          <input type="email" placeholder="Your Email" class="w-full border border-gray-300 rounded px-4 py-2" required>
-          <textarea placeholder="Your Message" rows="4" class="w-full border border-gray-300 rounded px-4 py-2"></textarea>
-          <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-gray-900 text-white text-center py-6 mt-8">
-    &copy; 2025 Divya Kadyan. All rights reserved.
+  <footer>
+    © 2025 ME Portfolio. All rights reserved.
   </footer>
 </body>
 </html>
